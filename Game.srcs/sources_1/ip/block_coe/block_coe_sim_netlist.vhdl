@@ -3,7 +3,8 @@
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
 -- Date        : Wed Mar  4 18:15:38 2020
 -- Host        : LAPTOP-OQJ5SABP running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim c:/Progh/Game/Game.srcs/sources_1/ip/block_coe/block_coe_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top block_coe -prefix
+--               block_coe_ block_coe_sim_netlist.vhdl
 -- Design      : block_coe
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -22,8 +23,6 @@ entity block_coe_blk_mem_gen_prim_wrapper_init is
     dina : in STD_LOGIC_VECTOR ( 3 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of block_coe_blk_mem_gen_prim_wrapper_init : entity is "blk_mem_gen_prim_wrapper_init";
 end block_coe_blk_mem_gen_prim_wrapper_init;
 
 architecture STRUCTURE of block_coe_blk_mem_gen_prim_wrapper_init is
@@ -247,8 +246,6 @@ entity block_coe_blk_mem_gen_prim_width is
     dina : in STD_LOGIC_VECTOR ( 3 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of block_coe_blk_mem_gen_prim_width : entity is "blk_mem_gen_prim_width";
 end block_coe_blk_mem_gen_prim_width;
 
 architecture STRUCTURE of block_coe_blk_mem_gen_prim_width is
@@ -276,8 +273,6 @@ entity block_coe_blk_mem_gen_generic_cstr is
     dina : in STD_LOGIC_VECTOR ( 3 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of block_coe_blk_mem_gen_generic_cstr : entity is "blk_mem_gen_generic_cstr";
 end block_coe_blk_mem_gen_generic_cstr;
 
 architecture STRUCTURE of block_coe_blk_mem_gen_generic_cstr is
@@ -305,8 +300,6 @@ entity block_coe_blk_mem_gen_top is
     dina : in STD_LOGIC_VECTOR ( 3 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of block_coe_blk_mem_gen_top : entity is "blk_mem_gen_top";
 end block_coe_blk_mem_gen_top;
 
 architecture STRUCTURE of block_coe_blk_mem_gen_top is
@@ -334,8 +327,6 @@ entity block_coe_blk_mem_gen_v8_4_3_synth is
     dina : in STD_LOGIC_VECTOR ( 3 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of block_coe_blk_mem_gen_v8_4_3_synth : entity is "blk_mem_gen_v8_4_3_synth";
 end block_coe_blk_mem_gen_v8_4_3_synth;
 
 architecture STRUCTURE of block_coe_blk_mem_gen_v8_4_3_synth is
@@ -570,8 +561,6 @@ entity block_coe_blk_mem_gen_v8_4_3 is
   attribute C_WRITE_WIDTH_B of block_coe_blk_mem_gen_v8_4_3 : entity is 4;
   attribute C_XDEVICEFAMILY : string;
   attribute C_XDEVICEFAMILY of block_coe_blk_mem_gen_v8_4_3 : entity is "artix7";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of block_coe_blk_mem_gen_v8_4_3 : entity is "blk_mem_gen_v8_4_3";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of block_coe_blk_mem_gen_v8_4_3 : entity is "yes";
 end block_coe_blk_mem_gen_v8_4_3;

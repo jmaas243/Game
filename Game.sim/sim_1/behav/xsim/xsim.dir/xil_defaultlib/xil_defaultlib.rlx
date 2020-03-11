@@ -2,4 +2,7 @@
 2019.1
 May 24 2019
 15:06:07
-C:/Progh/Game/Game.srcs/sources_1/new/top.vhd,1583083304,vhdl,,,,top,,,,,,,,
+C:/Progh/Game/Game.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,
+C:/Progh/Game/Game.srcs/sim_1/new/player1_tb.vhd,1583834802,vhdl,,,,player1_tb,,,,,,,,
+C:/Progh/Game/Game.srcs/sources_1/ip/player1_coe/player1_coe_sim_netlist.vhdl,1583781760,vhdl,,,,player1_coe;player1_coe_blk_mem_gen_generic_cstr;player1_coe_blk_mem_gen_prim_width;player1_coe_blk_mem_gen_prim_wrapper_init;player1_coe_blk_mem_gen_top;player1_coe_blk_mem_gen_v8_4_3;player1_coe_blk_mem_gen_v8_4_3_synth,,,,,,,,
+C:/Progh/Game/Game.srcs/sources_1/new/player1.vhd,1583917984,vhdl,,,,player1,,,,,,,,

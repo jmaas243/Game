@@ -3,7 +3,8 @@
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
 -- Date        : Wed Mar  4 18:15:38 2020
 -- Host        : LAPTOP-OQJ5SABP running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub c:/Progh/Game/Game.srcs/sources_1/ip/block_coe/block_coe_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top block_coe -prefix
+--               block_coe_ block_coe_stub.vhdl
 -- Design      : block_coe
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a35tcpg236-1

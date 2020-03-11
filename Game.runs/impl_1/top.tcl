@@ -60,7 +60,6 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Common 17-41} -limit 10000000
 
 start_step init_design
 set ACTIVE_STEP init_design
@@ -79,8 +78,10 @@ set rc [catch {
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
   add_files -quiet C:/Progh/Game/Game.runs/synth_1/top.dcp
   read_ip -quiet C:/Progh/Game/Game.srcs/sources_1/ip/clk_wiz/clk_wiz.xci
-  read_ip -quiet c:/Progh/Game/Game.srcs/sources_1/ip/block_coe/block_coe.xci
-  read_ip -quiet c:/Progh/Game/Game.srcs/sources_1/ip/wall_coe/wall_coe.xci
+  read_ip -quiet C:/Progh/Game/Game.srcs/sources_1/ip/block_coe/block_coe.xci
+  read_ip -quiet C:/Progh/Game/Game.srcs/sources_1/ip/wall_coe/wall_coe.xci
+  read_ip -quiet C:/Progh/Game/Game.srcs/sources_1/ip/player1_coe/player1_coe.xci
+  read_ip -quiet c:/Progh/Game/Game.srcs/sources_1/ip/player2_coe/player2_coe.xci
   read_xdc C:/Progh/Game/Game.srcs/constrs_1/new/constraint.xdc
   link_design -top top -part xc7a35tcpg236-1
   close_msg_db -file init_design.pb

@@ -68,22 +68,51 @@ component spi is
            LED  : out STD_LOGIC_VECTOR (7 downto 0) := x"FF");
 end component;
 
-component VGA is
-    Port ( Pixel_clk : in STD_LOGIC;
+component screen_writer
+		port(
+           clk : in STD_LOGIC;
            reset : in STD_LOGIC;
-                       
-           --output sync and clour
-           hsync, vsync : out  STD_LOGIC;	
+           
+           hcount, vcount : IN    INTEGER;	
+           
            r_out:  OUT  STD_LOGIC_VECTOR(3 DOWNTO 0);
            g_out:  OUT  STD_LOGIC_VECTOR(3 DOWNTO 0);
-           b_out:  OUT  STD_LOGIC_VECTOR(3 DOWNTO 0));
+           b_out:  OUT  STD_LOGIC_VECTOR(3 DOWNTO 0)
+--           LED: OUT  STD_LOGIC_VECTOR(7 DOWNTO 0)
+		);
+end component;
+
+component VGA is
+    Port (           
+          Pixel_clk : in STD_LOGIC;
+          Reset : in STD_LOGIC;
+          
+          r_in:  IN  STD_LOGIC_VECTOR(3 DOWNTO 0);
+          g_in:  IN  STD_LOGIC_VECTOR(3 DOWNTO 0);
+          b_in:  IN  STD_LOGIC_VECTOR(3 DOWNTO 0);
+          
+          HPos     : out integer;
+          VPos     : out integer;
+          --output sync and clour
+          hsync, vsync : out  STD_LOGIC;	
+          r_out:  OUT  STD_LOGIC_VECTOR(3 DOWNTO 0);
+          g_out:  OUT  STD_LOGIC_VECTOR(3 DOWNTO 0);
+          b_out:  OUT  STD_LOGIC_VECTOR(3 DOWNTO 0));
            
            --LED  : out STD_LOGIC_VECTOR (7 downto 0) := x"FF");
 end component;
 
+--clock 100
 signal clk_out : STD_LOGIC;
-signal clk_pixel : STD_LOGIC;
 
+--vga clock 25
+signal clk_pixel : STD_LOGIC;
+signal s_Hpos,s_Vpos : integer := 0;
+
+--sprite writer
+signal s_R, s_G, s_B : std_logic_vector(3 downto 0);
+
+--led debug
 signal led_zero : STD_LOGIC_VECTOR(7 downto 0);
 
 begin
@@ -100,13 +129,37 @@ spi_layout : spi port map(
            SS => slaveselect,
            LED => LED(7 downto 0));
            
+screen_writer_layout : screen_writer port map(
+           clk => clk_pixel,
+           reset => reset,
+           
+           hcount => s_Hpos, 
+           vcount => s_Vpos,
+           
+           r_out =>  s_R,
+           g_out =>  s_G,
+           b_out =>  s_B
+           
+           --LED => LED
+           );               
+           
 vga_layout : VGA port map( 
+
+
            Pixel_clk => clk_pixel,
            reset => reset,
             
+            r_in => s_R,
+            g_in => s_G,
+            b_in => s_B,
+          
+            HPos     => s_Hpos,
+            VPos     => s_Vpos,
+          
            --output sync and clour
            hsync => hsync, 
            vsync => vsync,
+           
            r_out =>  r_out(3 DOWNTO 0),
            g_out =>  g_out(3 DOWNTO 0),
            b_out =>  b_out(3 DOWNTO 0));

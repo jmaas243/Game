@@ -36,6 +36,7 @@ set_property PACKAGE_PIN G19 [get_ports {r_out[3]}]
 #reset
 set_property PACKAGE_PIN U18 [get_ports reset]
 set_property IOSTANDARD LVCMOS33 [get_ports reset]
+set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets reset_IBUF]
 
 #SPI
 set_property IOSTANDARD LVCMOS33 [get_ports miso]

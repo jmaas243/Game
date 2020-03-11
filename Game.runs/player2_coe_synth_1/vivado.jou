@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Wed Mar 11 10:47:25 2020
+# Process ID: 10920
+# Current directory: C:/Progh/Game/Game.runs/player2_coe_synth_1
+# Command line: vivado.exe -log player2_coe.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source player2_coe.tcl
+# Log file: C:/Progh/Game/Game.runs/player2_coe_synth_1/player2_coe.vds
+# Journal file: C:/Progh/Game/Game.runs/player2_coe_synth_1\vivado.jou
+#-----------------------------------------------------------
+source player2_coe.tcl -notrace

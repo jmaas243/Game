@@ -1,6 +1,6 @@
 Vivado Simulator 2019.1
 Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 03a672c2eeab430a8897ad7ba864192e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot top_behav xil_defaultlib.top -log elaborate.log 
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 03a672c2eeab430a8897ad7ba864192e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot player1_tb_behav xil_defaultlib.player1_tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -10,5 +10,26 @@ Time Resolution for simulation is 1ps
 Compiling package std.standard
 Compiling package std.textio
 Compiling package ieee.std_logic_1164
-Compiling architecture behavioral of entity xil_defaultlib.top
-Built simulation snapshot top_behav
+Compiling package ieee.numeric_std
+Compiling package unisim.vcomponents
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.std_logic_signed
+Compiling package ieee.std_logic_textio
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling module xil_defaultlib.glbl
+Compiling architecture gnd_v of entity unisim.GND [gnd_default]
+Compiling architecture rb18_internal_vhdl_v of entity unisim.RB18_INTERNAL_VHDL [\RB18_INTERNAL_VHDL(bram_size=18...]
+Compiling architecture ramb18e1_v of entity unisim.RAMB18E1 [\RAMB18E1(doa_reg=1,dob_reg=1,in...]
+Compiling architecture structure of entity xil_defaultlib.player1_coe_blk_mem_gen_prim_wrapper_init [player1_coe_blk_mem_gen_prim_wra...]
+Compiling architecture structure of entity xil_defaultlib.player1_coe_blk_mem_gen_prim_width [player1_coe_blk_mem_gen_prim_wid...]
+Compiling architecture structure of entity xil_defaultlib.player1_coe_blk_mem_gen_generic_cstr [player1_coe_blk_mem_gen_generic_...]
+Compiling architecture structure of entity xil_defaultlib.player1_coe_blk_mem_gen_top [player1_coe_blk_mem_gen_top_defa...]
+Compiling architecture structure of entity xil_defaultlib.player1_coe_blk_mem_gen_v8_4_3_synth [player1_coe_blk_mem_gen_v8_4_3_s...]
+Compiling architecture structure of entity xil_defaultlib.player1_coe_blk_mem_gen_v8_4_3 [player1_coe_blk_mem_gen_v8_4_3_d...]
+Compiling architecture structure of entity xil_defaultlib.player1_coe [player1_coe_default]
+Compiling architecture behavioral of entity xil_defaultlib.player1 [\player1(g_hinit=120,g_vinit=40,...]
+Compiling architecture sim of entity xil_defaultlib.player1_tb
+Built simulation snapshot player1_tb_behav

@@ -3,7 +3,8 @@
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
 // Date        : Wed Mar  4 18:15:38 2020
 // Host        : LAPTOP-OQJ5SABP running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim c:/Progh/Game/Game.srcs/sources_1/ip/block_coe/block_coe_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top block_coe -prefix
+//               block_coe_ block_coe_sim_netlist.v
 // Design      : block_coe
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -196,7 +197,6 @@ module block_coe
         .web(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_generic_cstr" *) 
 module block_coe_blk_mem_gen_generic_cstr
    (douta,
     clka,
@@ -227,7 +227,6 @@ module block_coe_blk_mem_gen_generic_cstr
         .wea(wea));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module block_coe_blk_mem_gen_prim_width
    (douta,
     clka,
@@ -258,7 +257,6 @@ module block_coe_blk_mem_gen_prim_width
         .wea(wea));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
 module block_coe_blk_mem_gen_prim_wrapper_init
    (douta,
     clka,
@@ -438,7 +436,6 @@ module block_coe_blk_mem_gen_prim_wrapper_init
         .WEBWE({1'b0,1'b0,wea,wea}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_top" *) 
 module block_coe_blk_mem_gen_top
    (douta,
     clka,
@@ -494,7 +491,7 @@ endmodule
 (* C_WEA_WIDTH = "1" *) (* C_WEB_WIDTH = "1" *) (* C_WRITE_DEPTH_A = "256" *) 
 (* C_WRITE_DEPTH_B = "256" *) (* C_WRITE_MODE_A = "WRITE_FIRST" *) (* C_WRITE_MODE_B = "WRITE_FIRST" *) 
 (* C_WRITE_WIDTH_A = "4" *) (* C_WRITE_WIDTH_B = "4" *) (* C_XDEVICEFAMILY = "artix7" *) 
-(* ORIG_REF_NAME = "blk_mem_gen_v8_4_3" *) (* downgradeipidentifiedwarnings = "yes" *) 
+(* downgradeipidentifiedwarnings = "yes" *) 
 module block_coe_blk_mem_gen_v8_4_3
    (clka,
     rsta,
@@ -690,7 +687,6 @@ module block_coe_blk_mem_gen_v8_4_3
         .wea(wea));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_v8_4_3_synth" *) 
 module block_coe_blk_mem_gen_v8_4_3_synth
    (douta,
     clka,

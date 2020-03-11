@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Wed Mar  4 21:16:17 2020
+| Date         : Wed Mar 11 16:06:02 2020
 | Host         : LAPTOP-OQJ5SABP running 64-bit major release  (build 9200)
 | Command      : report_methodology -file top_methodology_drc_routed.rpt -pb top_methodology_drc_routed.pb -rpx top_methodology_drc_routed.rpx
 | Design       : top
@@ -23,13 +23,13 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 57
+             Violations found: 33
 +-----------+------------------+------------------------------+------------+
 | Rule      | Severity         | Description                  | Violations |
 +-----------+------------------+------------------------------+------------+
 | TIMING-17 | Critical Warning | Non-clocked sequential cell  | 17         |
 | LUTAR-1   | Warning          | LUT drives async reset alert | 3          |
-| TIMING-20 | Warning          | Non-clocked latch            | 37         |
+| TIMING-20 | Warning          | Non-clocked latch            | 13         |
 +-----------+------------------+------------------------------+------------+
 
 2. REPORT DETAILS
@@ -121,202 +121,82 @@ Related violations: <none>
 
 LUTAR-1#1 Warning
 LUT drives async reset alert  
-LUT cell vga_layout/screen_writer_layout/color_scheme_layout/R_Data_Out_reg[1]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) vga_layout/screen_writer_layout/color_scheme_layout/B_Data_Out_reg[1]/PRE, vga_layout/screen_writer_layout/color_scheme_layout/G_Data_Out_reg[1]/PRE, vga_layout/screen_writer_layout/color_scheme_layout/R_Data_Out_reg[1]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell screen_writer_layout/color_scheme_layout/R_Data_Out_reg[1]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) screen_writer_layout/color_scheme_layout/B_Data_Out_reg[1]/PRE, screen_writer_layout/color_scheme_layout/G_Data_Out_reg[1]/PRE, screen_writer_layout/color_scheme_layout/R_Data_Out_reg[1]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#2 Warning
 LUT drives async reset alert  
-LUT cell vga_layout/screen_writer_layout/color_scheme_layout/R_Data_Out_reg[2]_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) vga_layout/screen_writer_layout/color_scheme_layout/B_Data_Out_reg[2]/PRE, vga_layout/screen_writer_layout/color_scheme_layout/G_Data_Out_reg[2]/PRE, vga_layout/screen_writer_layout/color_scheme_layout/R_Data_Out_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell screen_writer_layout/color_scheme_layout/R_Data_Out_reg[2]_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) screen_writer_layout/color_scheme_layout/B_Data_Out_reg[2]/PRE, screen_writer_layout/color_scheme_layout/G_Data_Out_reg[2]/PRE, screen_writer_layout/color_scheme_layout/R_Data_Out_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#3 Warning
 LUT drives async reset alert  
-LUT cell vga_layout/screen_writer_layout/color_scheme_layout/R_Data_Out_reg[3]_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) vga_layout/screen_writer_layout/color_scheme_layout/B_Data_Out_reg[3]/PRE, vga_layout/screen_writer_layout/color_scheme_layout/G_Data_Out_reg[3]/PRE, vga_layout/screen_writer_layout/color_scheme_layout/R_Data_Out_reg[3]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell screen_writer_layout/color_scheme_layout/R_Data_Out_reg[3]_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) screen_writer_layout/color_scheme_layout/B_Data_Out_reg[3]/PRE, screen_writer_layout/color_scheme_layout/G_Data_Out_reg[3]/PRE, screen_writer_layout/color_scheme_layout/R_Data_Out_reg[3]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 TIMING-20#1 Warning
 Non-clocked latch  
-The latch vga_layout/screen_writer_layout/Data_In_reg[0] cannot be properly analyzed as its control pin vga_layout/screen_writer_layout/Data_In_reg[0]/G is not reached by a timing clock
+The latch screen_writer_layout/Data_In_reg[0] cannot be properly analyzed as its control pin screen_writer_layout/Data_In_reg[0]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#2 Warning
 Non-clocked latch  
-The latch vga_layout/screen_writer_layout/Data_In_reg[1] cannot be properly analyzed as its control pin vga_layout/screen_writer_layout/Data_In_reg[1]/G is not reached by a timing clock
+The latch screen_writer_layout/Data_In_reg[1] cannot be properly analyzed as its control pin screen_writer_layout/Data_In_reg[1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#3 Warning
 Non-clocked latch  
-The latch vga_layout/screen_writer_layout/Data_In_reg[2] cannot be properly analyzed as its control pin vga_layout/screen_writer_layout/Data_In_reg[2]/G is not reached by a timing clock
+The latch screen_writer_layout/Data_In_reg[2] cannot be properly analyzed as its control pin screen_writer_layout/Data_In_reg[2]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#4 Warning
 Non-clocked latch  
-The latch vga_layout/screen_writer_layout/Data_In_reg[3] cannot be properly analyzed as its control pin vga_layout/screen_writer_layout/Data_In_reg[3]/G is not reached by a timing clock
+The latch screen_writer_layout/Data_In_reg[3] cannot be properly analyzed as its control pin screen_writer_layout/Data_In_reg[3]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#5 Warning
 Non-clocked latch  
-The latch vga_layout/screen_writer_layout/addr_wall_reg[0] cannot be properly analyzed as its control pin vga_layout/screen_writer_layout/addr_wall_reg[0]/G is not reached by a timing clock
+The latch screen_writer_layout/color_scheme_layout/B_Data_Out_reg[1] cannot be properly analyzed as its control pin screen_writer_layout/color_scheme_layout/B_Data_Out_reg[1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#6 Warning
 Non-clocked latch  
-The latch vga_layout/screen_writer_layout/addr_wall_reg[1] cannot be properly analyzed as its control pin vga_layout/screen_writer_layout/addr_wall_reg[1]/G is not reached by a timing clock
+The latch screen_writer_layout/color_scheme_layout/B_Data_Out_reg[2] cannot be properly analyzed as its control pin screen_writer_layout/color_scheme_layout/B_Data_Out_reg[2]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#7 Warning
 Non-clocked latch  
-The latch vga_layout/screen_writer_layout/addr_wall_reg[2] cannot be properly analyzed as its control pin vga_layout/screen_writer_layout/addr_wall_reg[2]/G is not reached by a timing clock
+The latch screen_writer_layout/color_scheme_layout/B_Data_Out_reg[3] cannot be properly analyzed as its control pin screen_writer_layout/color_scheme_layout/B_Data_Out_reg[3]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#8 Warning
 Non-clocked latch  
-The latch vga_layout/screen_writer_layout/addr_wall_reg[3] cannot be properly analyzed as its control pin vga_layout/screen_writer_layout/addr_wall_reg[3]/G is not reached by a timing clock
+The latch screen_writer_layout/color_scheme_layout/G_Data_Out_reg[1] cannot be properly analyzed as its control pin screen_writer_layout/color_scheme_layout/G_Data_Out_reg[1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#9 Warning
 Non-clocked latch  
-The latch vga_layout/screen_writer_layout/addr_wall_reg[4] cannot be properly analyzed as its control pin vga_layout/screen_writer_layout/addr_wall_reg[4]/G is not reached by a timing clock
+The latch screen_writer_layout/color_scheme_layout/G_Data_Out_reg[2] cannot be properly analyzed as its control pin screen_writer_layout/color_scheme_layout/G_Data_Out_reg[2]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#10 Warning
 Non-clocked latch  
-The latch vga_layout/screen_writer_layout/addr_wall_reg[5] cannot be properly analyzed as its control pin vga_layout/screen_writer_layout/addr_wall_reg[5]/G is not reached by a timing clock
+The latch screen_writer_layout/color_scheme_layout/G_Data_Out_reg[3] cannot be properly analyzed as its control pin screen_writer_layout/color_scheme_layout/G_Data_Out_reg[3]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#11 Warning
 Non-clocked latch  
-The latch vga_layout/screen_writer_layout/addr_wall_reg[6] cannot be properly analyzed as its control pin vga_layout/screen_writer_layout/addr_wall_reg[6]/G is not reached by a timing clock
+The latch screen_writer_layout/color_scheme_layout/R_Data_Out_reg[1] cannot be properly analyzed as its control pin screen_writer_layout/color_scheme_layout/R_Data_Out_reg[1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#12 Warning
 Non-clocked latch  
-The latch vga_layout/screen_writer_layout/addr_wall_reg[7] cannot be properly analyzed as its control pin vga_layout/screen_writer_layout/addr_wall_reg[7]/G is not reached by a timing clock
+The latch screen_writer_layout/color_scheme_layout/R_Data_Out_reg[2] cannot be properly analyzed as its control pin screen_writer_layout/color_scheme_layout/R_Data_Out_reg[2]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#13 Warning
 Non-clocked latch  
-The latch vga_layout/screen_writer_layout/addra_reg[0] cannot be properly analyzed as its control pin vga_layout/screen_writer_layout/addra_reg[0]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#14 Warning
-Non-clocked latch  
-The latch vga_layout/screen_writer_layout/addra_reg[1] cannot be properly analyzed as its control pin vga_layout/screen_writer_layout/addra_reg[1]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#15 Warning
-Non-clocked latch  
-The latch vga_layout/screen_writer_layout/addra_reg[2] cannot be properly analyzed as its control pin vga_layout/screen_writer_layout/addra_reg[2]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#16 Warning
-Non-clocked latch  
-The latch vga_layout/screen_writer_layout/addra_reg[3] cannot be properly analyzed as its control pin vga_layout/screen_writer_layout/addra_reg[3]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#17 Warning
-Non-clocked latch  
-The latch vga_layout/screen_writer_layout/addra_reg[4] cannot be properly analyzed as its control pin vga_layout/screen_writer_layout/addra_reg[4]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#18 Warning
-Non-clocked latch  
-The latch vga_layout/screen_writer_layout/addra_reg[5] cannot be properly analyzed as its control pin vga_layout/screen_writer_layout/addra_reg[5]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#19 Warning
-Non-clocked latch  
-The latch vga_layout/screen_writer_layout/addra_reg[6] cannot be properly analyzed as its control pin vga_layout/screen_writer_layout/addra_reg[6]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#20 Warning
-Non-clocked latch  
-The latch vga_layout/screen_writer_layout/addra_reg[7] cannot be properly analyzed as its control pin vga_layout/screen_writer_layout/addra_reg[7]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#21 Warning
-Non-clocked latch  
-The latch vga_layout/screen_writer_layout/color_scheme_layout/B_Data_Out_reg[1] cannot be properly analyzed as its control pin vga_layout/screen_writer_layout/color_scheme_layout/B_Data_Out_reg[1]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#22 Warning
-Non-clocked latch  
-The latch vga_layout/screen_writer_layout/color_scheme_layout/B_Data_Out_reg[2] cannot be properly analyzed as its control pin vga_layout/screen_writer_layout/color_scheme_layout/B_Data_Out_reg[2]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#23 Warning
-Non-clocked latch  
-The latch vga_layout/screen_writer_layout/color_scheme_layout/B_Data_Out_reg[3] cannot be properly analyzed as its control pin vga_layout/screen_writer_layout/color_scheme_layout/B_Data_Out_reg[3]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#24 Warning
-Non-clocked latch  
-The latch vga_layout/screen_writer_layout/color_scheme_layout/G_Data_Out_reg[1] cannot be properly analyzed as its control pin vga_layout/screen_writer_layout/color_scheme_layout/G_Data_Out_reg[1]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#25 Warning
-Non-clocked latch  
-The latch vga_layout/screen_writer_layout/color_scheme_layout/G_Data_Out_reg[2] cannot be properly analyzed as its control pin vga_layout/screen_writer_layout/color_scheme_layout/G_Data_Out_reg[2]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#26 Warning
-Non-clocked latch  
-The latch vga_layout/screen_writer_layout/color_scheme_layout/G_Data_Out_reg[3] cannot be properly analyzed as its control pin vga_layout/screen_writer_layout/color_scheme_layout/G_Data_Out_reg[3]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#27 Warning
-Non-clocked latch  
-The latch vga_layout/screen_writer_layout/color_scheme_layout/R_Data_Out_reg[1] cannot be properly analyzed as its control pin vga_layout/screen_writer_layout/color_scheme_layout/R_Data_Out_reg[1]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#28 Warning
-Non-clocked latch  
-The latch vga_layout/screen_writer_layout/color_scheme_layout/R_Data_Out_reg[2] cannot be properly analyzed as its control pin vga_layout/screen_writer_layout/color_scheme_layout/R_Data_Out_reg[2]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#29 Warning
-Non-clocked latch  
-The latch vga_layout/screen_writer_layout/color_scheme_layout/R_Data_Out_reg[3] cannot be properly analyzed as its control pin vga_layout/screen_writer_layout/color_scheme_layout/R_Data_Out_reg[3]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#30 Warning
-Non-clocked latch  
-The latch vga_layout/screen_writer_layout/read_block_reg[0] cannot be properly analyzed as its control pin vga_layout/screen_writer_layout/read_block_reg[0]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#31 Warning
-Non-clocked latch  
-The latch vga_layout/screen_writer_layout/read_block_reg[1] cannot be properly analyzed as its control pin vga_layout/screen_writer_layout/read_block_reg[1]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#32 Warning
-Non-clocked latch  
-The latch vga_layout/screen_writer_layout/read_block_reg[2] cannot be properly analyzed as its control pin vga_layout/screen_writer_layout/read_block_reg[2]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#33 Warning
-Non-clocked latch  
-The latch vga_layout/screen_writer_layout/read_block_reg[3] cannot be properly analyzed as its control pin vga_layout/screen_writer_layout/read_block_reg[3]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#34 Warning
-Non-clocked latch  
-The latch vga_layout/screen_writer_layout/read_block_reg[4] cannot be properly analyzed as its control pin vga_layout/screen_writer_layout/read_block_reg[4]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#35 Warning
-Non-clocked latch  
-The latch vga_layout/screen_writer_layout/read_block_reg[5] cannot be properly analyzed as its control pin vga_layout/screen_writer_layout/read_block_reg[5]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#36 Warning
-Non-clocked latch  
-The latch vga_layout/screen_writer_layout/read_block_reg[6] cannot be properly analyzed as its control pin vga_layout/screen_writer_layout/read_block_reg[6]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#37 Warning
-Non-clocked latch  
-The latch vga_layout/screen_writer_layout/read_block_reg[7] cannot be properly analyzed as its control pin vga_layout/screen_writer_layout/read_block_reg[7]/G is not reached by a timing clock
+The latch screen_writer_layout/color_scheme_layout/R_Data_Out_reg[3] cannot be properly analyzed as its control pin screen_writer_layout/color_scheme_layout/R_Data_Out_reg[3]/G is not reached by a timing clock
 Related violations: <none>
 
 

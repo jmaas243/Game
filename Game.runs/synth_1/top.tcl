@@ -19,7 +19,6 @@ proc create_report { reportName command } {
 }
 set_param chipscope.maxJobs 3
 set_param xicom.use_bs_reader 1
-set_msg_config -id {Common 17-41} -limit 10000000
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -34,8 +33,10 @@ set_property target_language VHDL [current_project]
 set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]
 set_property ip_output_repo c:/Progh/Game/Game.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-add_files c:/Image/block.coe
-add_files c:/Image/wall.coe
+add_files C:/Image/block.coe
+add_files C:/Image/wall.coe
+add_files C:/Image/player1.coe
+add_files c:/Image/player2.coe
 read_vhdl -library xil_defaultlib {
   C:/Progh/Game/Game.srcs/sources_1/new/color_scheme.vhd
   C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd
@@ -48,11 +49,17 @@ set_property used_in_implementation false [get_files -all c:/Progh/Game/Game.src
 set_property used_in_implementation false [get_files -all c:/Progh/Game/Game.srcs/sources_1/ip/clk_wiz/clk_wiz.xdc]
 set_property used_in_implementation false [get_files -all c:/Progh/Game/Game.srcs/sources_1/ip/clk_wiz/clk_wiz_ooc.xdc]
 
-read_ip -quiet c:/Progh/Game/Game.srcs/sources_1/ip/block_coe/block_coe.xci
+read_ip -quiet C:/Progh/Game/Game.srcs/sources_1/ip/block_coe/block_coe.xci
 set_property used_in_implementation false [get_files -all c:/Progh/Game/Game.srcs/sources_1/ip/block_coe/block_coe_ooc.xdc]
 
-read_ip -quiet c:/Progh/Game/Game.srcs/sources_1/ip/wall_coe/wall_coe.xci
+read_ip -quiet C:/Progh/Game/Game.srcs/sources_1/ip/wall_coe/wall_coe.xci
 set_property used_in_implementation false [get_files -all c:/Progh/Game/Game.srcs/sources_1/ip/wall_coe/wall_coe_ooc.xdc]
+
+read_ip -quiet C:/Progh/Game/Game.srcs/sources_1/ip/player1_coe/player1_coe.xci
+set_property used_in_implementation false [get_files -all c:/Progh/Game/Game.srcs/sources_1/ip/player1_coe/player1_coe_ooc.xdc]
+
+read_ip -quiet c:/Progh/Game/Game.srcs/sources_1/ip/player2_coe/player2_coe.xci
+set_property used_in_implementation false [get_files -all c:/Progh/Game/Game.srcs/sources_1/ip/player2_coe/player2_coe_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

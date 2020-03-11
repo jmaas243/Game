@@ -1,0 +1,8 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Game.srcs/sources_1/ip/player1_coe/player1_coe_sim_netlist.vhdl" \
+"../../../../Game.srcs/sources_1/new/player1.vhd" \
+"../../../../Game.srcs/sim_1/new/player1_tb.vhd" \
+
+# Do not sort compile order
+nosort

@@ -7,7 +7,13 @@ use IEEE.NUMERIC_STD.ALL;
 entity VGA is
     Port (    Pixel_clk : in STD_LOGIC;
               reset : in STD_LOGIC;
-    
+              
+              r_in:  IN  STD_LOGIC_VECTOR(3 DOWNTO 0);
+              g_in:  IN  STD_LOGIC_VECTOR(3 DOWNTO 0);
+              b_in:  IN  STD_LOGIC_VECTOR(3 DOWNTO 0);
+          
+              HPos     : out integer;
+		      VPos     : out integer;
               --output sync and clour
               hsync, vsync : out  STD_LOGIC;	
               r_out:  OUT  STD_LOGIC_VECTOR(3 DOWNTO 0);
@@ -31,41 +37,8 @@ architecture Behavioral of VGA is
   constant V_backporch: integer := 33;			--vertical back porch width in rows
   constant V_total_pixels: integer := (V_pixels + V_frontporch + V_syncwidth + V_backporch);
   constant V_sync_polarity: STD_LOGIC := '0';	--vertical sync pulse polarity (1 = positive, 0 = negative)
-
-component screen_writer is
-    Port (
-           clk : in STD_LOGIC;
-           reset : in STD_LOGIC;
-           
-           hcount, vcount : IN    INTEGER;	
-           r_out:  OUT  STD_LOGIC_VECTOR(3 DOWNTO 0);
-           g_out:  OUT  STD_LOGIC_VECTOR(3 DOWNTO 0);
-           b_out:  OUT  STD_LOGIC_VECTOR(3 DOWNTO 0)
---           LED: OUT  STD_LOGIC_VECTOR(7 DOWNTO 0)
-           );
-end component;
-
---vga position and colour input
-signal x: INTEGER;
-signal y: INTEGER;
-
-signal r_in, g_in, b_in : STD_LOGIC_VECTOR(3 downto 0); 
-  
+ 
 begin
-
-           
-screen_writer_layout : screen_writer port map(
-           clk => Pixel_clk,
-           reset => reset,
-           
-           hcount => x, 
-           vcount => y,
-           r_out =>  r_in(3 DOWNTO 0),
-           g_out =>  g_in(3 DOWNTO 0),
-           b_out =>  b_in(3 DOWNTO 0)
-           
-           --LED => LED
-           );    
 
 process (Pixel_clk) 
     VARIABLE hcount	:	INTEGER RANGE 0 TO H_total_pixels - 1 := 0;  --horizontal counter (counts the columns)
@@ -74,9 +47,9 @@ begin
   if rising_edge(Pixel_clk) then
 	   -- display time
 	   if (hcount >= 0) and (hcount < H_pixels) and (vcount >= 0) and (vcount < V_pixels) then	
-        r_out <=  r_in(3 DOWNTO 0);
-        g_out <=  g_in(3 DOWNTO 0);
-        b_out <=  b_in(3 DOWNTO 0); 
+        r_out <=  r_in;
+        g_out <=  g_in;
+        b_out <=  b_in; 
       -- blanking time
 	  else 
         r_out <= "0000";
@@ -108,8 +81,8 @@ begin
         vcount := 0;
       end if;
       
-      x <= hcount;
-      y <= vcount;
+      Hpos <= hcount;
+      Vpos <= vcount;
 	 end if;
 end process;
 
