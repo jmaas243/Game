@@ -1,0 +1,2 @@
+heart_coe_sim_netlist.vhdl,vhdl,xil_defaultlib,../../../../Game.srcs/sources_1/ip/heart_coe/heart_coe_sim_netlist.vhdl,
+glbl.v,Verilog,xil_defaultlib,glbl.v

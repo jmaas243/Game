@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Wed Mar 11 16:05:42 2020
+| Date         : Thu Mar 12 19:43:54 2020
 | Host         : LAPTOP-OQJ5SABP running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
 | Design       : top
@@ -58,10 +58,10 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              29 |           15 |
+| No           | No                    | No                     |              29 |           20 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              26 |           13 |
-| Yes          | No                    | No                     |               9 |            4 |
+| No           | Yes                   | No                     |              26 |           10 |
+| Yes          | No                    | No                     |               9 |            3 |
 | Yes          | No                    | Yes                    |               0 |            0 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
@@ -77,13 +77,13 @@ Table of Contents
 |  clock_layout/inst/clk_pixel                                        |                   | vga_layout/vsync0                                                  |                1 |              1 |
 |  screen_writer_layout/color_scheme_layout/R_Data_Out_reg[2]_i_2_n_0 |                   | screen_writer_layout/color_scheme_layout/R_Data_Out_reg[2]_i_3_n_0 |                1 |              3 |
 |  screen_writer_layout/color_scheme_layout/R_Data_Out_reg[3]_i_2_n_0 |                   | screen_writer_layout/color_scheme_layout/R_Data_Out_reg[1]_i_1_n_0 |                1 |              3 |
-|  screen_writer_layout/color_scheme_layout/R_Data_Out_reg[3]_i_2_n_0 |                   | screen_writer_layout/color_scheme_layout/R_Data_Out_reg[3]_i_3_n_0 |                2 |              3 |
-|  screen_writer_layout/E[0]                                          |                   |                                                                    |                1 |              4 |
-|  clock_layout/inst/clk_pixel                                        |                   | vga_layout/hcount[8]_i_1_n_0                                       |                4 |              6 |
+|  screen_writer_layout/color_scheme_layout/R_Data_Out_reg[3]_i_2_n_0 |                   | screen_writer_layout/color_scheme_layout/R_Data_Out_reg[3]_i_3_n_0 |                1 |              3 |
+|  screen_writer_layout/E[0]                                          |                   |                                                                    |                3 |              4 |
+|  clock_layout/inst/clk_pixel                                        |                   | vga_layout/hcount[8]_i_1_n_0                                       |                2 |              6 |
 |  slaveselect_IBUF_BUFG                                              |                   |                                                                    |                6 |              8 |
-|  spi_clk_IBUF_BUFG                                                  | spi_layout/p_0_in |                                                                    |                4 |              9 |
+|  spi_clk_IBUF_BUFG                                                  | spi_layout/p_0_in |                                                                    |                3 |              9 |
 |  clock_layout/inst/clk_pixel                                        |                   | vga_layout/r_out[3]_i_1_n_0                                        |                3 |              9 |
-|  clock_layout/inst/clk_pixel                                        |                   |                                                                    |                8 |             17 |
+|  clock_layout/inst/clk_pixel                                        |                   |                                                                    |               11 |             17 |
 +---------------------------------------------------------------------+-------------------+--------------------------------------------------------------------+------------------+----------------+
 
 

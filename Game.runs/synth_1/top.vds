@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Wed Mar 11 16:04:30 2020
-# Process ID: 28300
+# Start of session at: Thu Mar 12 19:42:39 2020
+# Process ID: 16460
 # Current directory: C:/Progh/Game/Game.runs/synth_1
 # Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
 # Log file: C:/Progh/Game/Game.runs/synth_1/top.vds
@@ -16,50 +16,72 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 21208 
+INFO: Helper process launched with PID 16376 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 730.957 ; gain = 176.609
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 731.930 ; gain = 177.648
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'top' [C:/Progh/Game/Game.srcs/sources_1/new/top.vhd:54]
-INFO: [Synth 8-3491] module 'clk_wiz' declared at 'C:/Progh/Game/Game.runs/synth_1/.Xil/Vivado-28300-LAPTOP-OQJ5SABP/realtime/clk_wiz_stub.vhdl:5' bound to instance 'clock_layout' of component 'clk_wiz' [C:/Progh/Game/Game.srcs/sources_1/new/top.vhd:120]
-INFO: [Synth 8-638] synthesizing module 'clk_wiz' [C:/Progh/Game/Game.runs/synth_1/.Xil/Vivado-28300-LAPTOP-OQJ5SABP/realtime/clk_wiz_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'clk_wiz' declared at 'C:/Progh/Game/Game.runs/synth_1/.Xil/Vivado-16460-LAPTOP-OQJ5SABP/realtime/clk_wiz_stub.vhdl:5' bound to instance 'clock_layout' of component 'clk_wiz' [C:/Progh/Game/Game.srcs/sources_1/new/top.vhd:120]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz' [C:/Progh/Game/Game.runs/synth_1/.Xil/Vivado-16460-LAPTOP-OQJ5SABP/realtime/clk_wiz_stub.vhdl:14]
 INFO: [Synth 8-3491] module 'SPI' declared at 'C:/Progh/Game/Game.srcs/sources_1/new/spi.vhd:25' bound to instance 'spi_layout' of component 'spi' [C:/Progh/Game/Game.srcs/sources_1/new/top.vhd:125]
 INFO: [Synth 8-638] synthesizing module 'SPI' [C:/Progh/Game/Game.srcs/sources_1/new/spi.vhd:33]
 INFO: [Synth 8-256] done synthesizing module 'SPI' (1#1) [C:/Progh/Game/Game.srcs/sources_1/new/spi.vhd:33]
 WARNING: [Synth 8-5640] Port 'led' is missing in component declaration [C:/Progh/Game/Game.srcs/sources_1/new/top.vhd:71]
 INFO: [Synth 8-3491] module 'screen_writer' declared at 'C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:40' bound to instance 'screen_writer_layout' of component 'screen_writer' [C:/Progh/Game/Game.srcs/sources_1/new/top.vhd:132]
 INFO: [Synth 8-638] synthesizing module 'screen_writer' [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:53]
-INFO: [Synth 8-3491] module 'player1_coe' declared at 'C:/Progh/Game/Game.runs/synth_1/.Xil/Vivado-28300-LAPTOP-OQJ5SABP/realtime/player1_coe_stub.vhdl:5' bound to instance 'player1_ram' of component 'player1_coe' [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:154]
-INFO: [Synth 8-638] synthesizing module 'player1_coe' [C:/Progh/Game/Game.runs/synth_1/.Xil/Vivado-28300-LAPTOP-OQJ5SABP/realtime/player1_coe_stub.vhdl:17]
-INFO: [Synth 8-3491] module 'player2_coe' declared at 'C:/Progh/Game/Game.runs/synth_1/.Xil/Vivado-28300-LAPTOP-OQJ5SABP/realtime/player2_coe_stub.vhdl:5' bound to instance 'player2_ram' of component 'player2_coe' [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:162]
-INFO: [Synth 8-638] synthesizing module 'player2_coe' [C:/Progh/Game/Game.runs/synth_1/.Xil/Vivado-28300-LAPTOP-OQJ5SABP/realtime/player2_coe_stub.vhdl:17]
-INFO: [Synth 8-3491] module 'block_coe' declared at 'C:/Progh/Game/Game.runs/synth_1/.Xil/Vivado-28300-LAPTOP-OQJ5SABP/realtime/block_coe_stub.vhdl:5' bound to instance 'block_ram' of component 'block_coe' [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:170]
-INFO: [Synth 8-638] synthesizing module 'block_coe' [C:/Progh/Game/Game.runs/synth_1/.Xil/Vivado-28300-LAPTOP-OQJ5SABP/realtime/block_coe_stub.vhdl:17]
-INFO: [Synth 8-3491] module 'wall_coe' declared at 'C:/Progh/Game/Game.runs/synth_1/.Xil/Vivado-28300-LAPTOP-OQJ5SABP/realtime/wall_coe_stub.vhdl:5' bound to instance 'wall_ram' of component 'wall_coe' [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:178]
-INFO: [Synth 8-638] synthesizing module 'wall_coe' [C:/Progh/Game/Game.runs/synth_1/.Xil/Vivado-28300-LAPTOP-OQJ5SABP/realtime/wall_coe_stub.vhdl:17]
-INFO: [Synth 8-3491] module 'color_scheme' declared at 'C:/Progh/Game/Game.srcs/sources_1/new/color_scheme.vhd:38' bound to instance 'color_scheme_layout' of component 'color_scheme' [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:186]
+INFO: [Synth 8-3491] module 'bomb_coe' declared at 'C:/Progh/Game/Game.runs/synth_1/.Xil/Vivado-16460-LAPTOP-OQJ5SABP/realtime/bomb_coe_stub.vhdl:5' bound to instance 'bomb_ram' of component 'bomb_coe' [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:235]
+INFO: [Synth 8-638] synthesizing module 'bomb_coe' [C:/Progh/Game/Game.runs/synth_1/.Xil/Vivado-16460-LAPTOP-OQJ5SABP/realtime/bomb_coe_stub.vhdl:17]
+INFO: [Synth 8-3491] module 'bomb_up_coe' declared at 'C:/Progh/Game/Game.runs/synth_1/.Xil/Vivado-16460-LAPTOP-OQJ5SABP/realtime/bomb_up_coe_stub.vhdl:5' bound to instance 'bomb_up_ram' of component 'bomb_up_coe' [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:243]
+INFO: [Synth 8-638] synthesizing module 'bomb_up_coe' [C:/Progh/Game/Game.runs/synth_1/.Xil/Vivado-16460-LAPTOP-OQJ5SABP/realtime/bomb_up_coe_stub.vhdl:17]
+INFO: [Synth 8-3491] module 'freeze_coe' declared at 'C:/Progh/Game/Game.runs/synth_1/.Xil/Vivado-16460-LAPTOP-OQJ5SABP/realtime/freeze_coe_stub.vhdl:5' bound to instance 'freeze_ram' of component 'freeze_coe' [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:251]
+INFO: [Synth 8-638] synthesizing module 'freeze_coe' [C:/Progh/Game/Game.runs/synth_1/.Xil/Vivado-16460-LAPTOP-OQJ5SABP/realtime/freeze_coe_stub.vhdl:17]
+INFO: [Synth 8-3491] module 'heart_coe' declared at 'C:/Progh/Game/Game.runs/synth_1/.Xil/Vivado-16460-LAPTOP-OQJ5SABP/realtime/heart_coe_stub.vhdl:5' bound to instance 'heart_ram' of component 'heart_coe' [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:259]
+INFO: [Synth 8-638] synthesizing module 'heart_coe' [C:/Progh/Game/Game.runs/synth_1/.Xil/Vivado-16460-LAPTOP-OQJ5SABP/realtime/heart_coe_stub.vhdl:17]
+INFO: [Synth 8-3491] module 'speed_coe' declared at 'C:/Progh/Game/Game.runs/synth_1/.Xil/Vivado-16460-LAPTOP-OQJ5SABP/realtime/speed_coe_stub.vhdl:5' bound to instance 'speed_ram' of component 'speed_coe' [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:267]
+INFO: [Synth 8-638] synthesizing module 'speed_coe' [C:/Progh/Game/Game.runs/synth_1/.Xil/Vivado-16460-LAPTOP-OQJ5SABP/realtime/speed_coe_stub.vhdl:17]
+INFO: [Synth 8-3491] module 'player1_coe' declared at 'C:/Progh/Game/Game.runs/synth_1/.Xil/Vivado-16460-LAPTOP-OQJ5SABP/realtime/player1_coe_stub.vhdl:5' bound to instance 'player1_ram' of component 'player1_coe' [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:275]
+INFO: [Synth 8-638] synthesizing module 'player1_coe' [C:/Progh/Game/Game.runs/synth_1/.Xil/Vivado-16460-LAPTOP-OQJ5SABP/realtime/player1_coe_stub.vhdl:17]
+INFO: [Synth 8-3491] module 'player2_coe' declared at 'C:/Progh/Game/Game.runs/synth_1/.Xil/Vivado-16460-LAPTOP-OQJ5SABP/realtime/player2_coe_stub.vhdl:5' bound to instance 'player2_ram' of component 'player2_coe' [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:283]
+INFO: [Synth 8-638] synthesizing module 'player2_coe' [C:/Progh/Game/Game.runs/synth_1/.Xil/Vivado-16460-LAPTOP-OQJ5SABP/realtime/player2_coe_stub.vhdl:17]
+INFO: [Synth 8-3491] module 'block_coe' declared at 'C:/Progh/Game/Game.runs/synth_1/.Xil/Vivado-16460-LAPTOP-OQJ5SABP/realtime/block_coe_stub.vhdl:5' bound to instance 'block_ram' of component 'block_coe' [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:291]
+INFO: [Synth 8-638] synthesizing module 'block_coe' [C:/Progh/Game/Game.runs/synth_1/.Xil/Vivado-16460-LAPTOP-OQJ5SABP/realtime/block_coe_stub.vhdl:17]
+INFO: [Synth 8-3491] module 'wall_coe' declared at 'C:/Progh/Game/Game.runs/synth_1/.Xil/Vivado-16460-LAPTOP-OQJ5SABP/realtime/wall_coe_stub.vhdl:5' bound to instance 'wall_ram' of component 'wall_coe' [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:299]
+INFO: [Synth 8-638] synthesizing module 'wall_coe' [C:/Progh/Game/Game.runs/synth_1/.Xil/Vivado-16460-LAPTOP-OQJ5SABP/realtime/wall_coe_stub.vhdl:17]
+INFO: [Synth 8-3491] module 'color_scheme' declared at 'C:/Progh/Game/Game.srcs/sources_1/new/color_scheme.vhd:38' bound to instance 'color_scheme_layout' of component 'color_scheme' [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:307]
 INFO: [Synth 8-638] synthesizing module 'color_scheme' [C:/Progh/Game/Game.srcs/sources_1/new/color_scheme.vhd:47]
 INFO: [Synth 8-256] done synthesizing module 'color_scheme' (2#1) [C:/Progh/Game/Game.srcs/sources_1/new/color_scheme.vhd:47]
-WARNING: [Synth 8-614] signal 'hcount' is read in the process but is not in the sensitivity list [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:192]
-WARNING: [Synth 8-614] signal 'vcount' is read in the process but is not in the sensitivity list [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:192]
-WARNING: [Synth 8-614] signal 'hor_int' is read in the process but is not in the sensitivity list [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:192]
-WARNING: [Synth 8-614] signal 'ver_int' is read in the process but is not in the sensitivity list [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:192]
-WARNING: [Synth 8-614] signal 'read_wall' is read in the process but is not in the sensitivity list [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:192]
-WARNING: [Synth 8-614] signal 'read_block' is read in the process but is not in the sensitivity list [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:192]
-WARNING: [Synth 8-614] signal 'x' is read in the process but is not in the sensitivity list [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:192]
-WARNING: [Synth 8-614] signal 'y' is read in the process but is not in the sensitivity list [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:192]
-WARNING: [Synth 8-614] signal 'read_player1' is read in the process but is not in the sensitivity list [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:192]
-WARNING: [Synth 8-614] signal 'read_player2' is read in the process but is not in the sensitivity list [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:192]
-WARNING: [Synth 8-614] signal 'dout_player1' is read in the process but is not in the sensitivity list [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:192]
-WARNING: [Synth 8-614] signal 'dout_player2' is read in the process but is not in the sensitivity list [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:192]
-WARNING: [Synth 8-614] signal 'dout_wall' is read in the process but is not in the sensitivity list [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:192]
-WARNING: [Synth 8-614] signal 'R_Data_Out' is read in the process but is not in the sensitivity list [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:192]
-WARNING: [Synth 8-614] signal 'G_Data_Out' is read in the process but is not in the sensitivity list [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:192]
-WARNING: [Synth 8-614] signal 'B_Data_Out' is read in the process but is not in the sensitivity list [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:192]
-WARNING: [Synth 8-614] signal 'enable_player1' is read in the process but is not in the sensitivity list [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:192]
-WARNING: [Synth 8-614] signal 'enable_player2' is read in the process but is not in the sensitivity list [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:192]
-WARNING: [Synth 8-614] signal 'dout_block' is read in the process but is not in the sensitivity list [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:192]
-WARNING: [Synth 8-5863] Implementing Library version of Mod/Rem due to signed path. This typically leads to poor QOR. Check RTL to see if unsigned path for the operator is possible  [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:217]
+WARNING: [Synth 8-614] signal 'hcount' is read in the process but is not in the sensitivity list [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:313]
+WARNING: [Synth 8-614] signal 'vcount' is read in the process but is not in the sensitivity list [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:313]
+WARNING: [Synth 8-614] signal 'hor_int' is read in the process but is not in the sensitivity list [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:313]
+WARNING: [Synth 8-614] signal 'ver_int' is read in the process but is not in the sensitivity list [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:313]
+WARNING: [Synth 8-614] signal 'read_wall' is read in the process but is not in the sensitivity list [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:313]
+WARNING: [Synth 8-614] signal 'read_bomb' is read in the process but is not in the sensitivity list [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:313]
+WARNING: [Synth 8-614] signal 'read_block' is read in the process but is not in the sensitivity list [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:313]
+WARNING: [Synth 8-614] signal 'x' is read in the process but is not in the sensitivity list [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:313]
+WARNING: [Synth 8-614] signal 'y' is read in the process but is not in the sensitivity list [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:313]
+WARNING: [Synth 8-614] signal 'read_player1' is read in the process but is not in the sensitivity list [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:313]
+WARNING: [Synth 8-614] signal 'read_player2' is read in the process but is not in the sensitivity list [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:313]
+WARNING: [Synth 8-614] signal 'read_speed' is read in the process but is not in the sensitivity list [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:313]
+WARNING: [Synth 8-614] signal 'read_bomb_up' is read in the process but is not in the sensitivity list [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:313]
+WARNING: [Synth 8-614] signal 'read_freeze' is read in the process but is not in the sensitivity list [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:313]
+WARNING: [Synth 8-614] signal 'read_heart' is read in the process but is not in the sensitivity list [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:313]
+WARNING: [Synth 8-614] signal 'dout_player1' is read in the process but is not in the sensitivity list [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:313]
+WARNING: [Synth 8-614] signal 'dout_player2' is read in the process but is not in the sensitivity list [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:313]
+WARNING: [Synth 8-614] signal 'dout_bomb' is read in the process but is not in the sensitivity list [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:313]
+WARNING: [Synth 8-614] signal 'dout_wall' is read in the process but is not in the sensitivity list [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:313]
+WARNING: [Synth 8-614] signal 'R_Data_Out' is read in the process but is not in the sensitivity list [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:313]
+WARNING: [Synth 8-614] signal 'G_Data_Out' is read in the process but is not in the sensitivity list [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:313]
+WARNING: [Synth 8-614] signal 'B_Data_Out' is read in the process but is not in the sensitivity list [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:313]
+WARNING: [Synth 8-614] signal 'enable_bomb' is read in the process but is not in the sensitivity list [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:313]
+WARNING: [Synth 8-614] signal 'dout_speed' is read in the process but is not in the sensitivity list [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:313]
+WARNING: [Synth 8-614] signal 'dout_freeze' is read in the process but is not in the sensitivity list [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:313]
+WARNING: [Synth 8-614] signal 'dout_bomb_up' is read in the process but is not in the sensitivity list [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:313]
+WARNING: [Synth 8-614] signal 'dout_heart' is read in the process but is not in the sensitivity list [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:313]
+WARNING: [Synth 8-614] signal 'enable_player1' is read in the process but is not in the sensitivity list [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:313]
+WARNING: [Synth 8-614] signal 'enable_player2' is read in the process but is not in the sensitivity list [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:313]
+WARNING: [Synth 8-614] signal 'dout_block' is read in the process but is not in the sensitivity list [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:313]
+WARNING: [Synth 8-5863] Implementing Library version of Mod/Rem due to signed path. This typically leads to poor QOR. Check RTL to see if unsigned path for the operator is possible  [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:350]
+WARNING: [Synth 8-5863] Implementing Library version of Mod/Rem due to signed path. This typically leads to poor QOR. Check RTL to see if unsigned path for the operator is possible  [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:342]
 WARNING: [Synth 8-3848] Net LED in module/entity screen_writer does not have driver. [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:49]
 INFO: [Synth 8-256] done synthesizing module 'screen_writer' (3#1) [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:53]
 INFO: [Synth 8-3491] module 'VGA' declared at 'C:/Progh/Game/Game.srcs/sources_1/new/vga.vhd:7' bound to instance 'vga_layout' of component 'VGA' [C:/Progh/Game/Game.srcs/sources_1/new/top.vhd:146]
@@ -76,7 +98,7 @@ WARNING: [Synth 8-3331] design screen_writer has unconnected port LED[2]
 WARNING: [Synth 8-3331] design screen_writer has unconnected port LED[1]
 WARNING: [Synth 8-3331] design screen_writer has unconnected port LED[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 798.289 ; gain = 243.941
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 799.316 ; gain = 245.035
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -89,10 +111,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 798.289 ; gain = 243.941
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 799.316 ; gain = 245.035
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 798.289 ; gain = 243.941
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 799.316 ; gain = 245.035
 ---------------------------------------------------------------------------------
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -108,6 +130,16 @@ Parsing XDC File [c:/Progh/Game/Game.srcs/sources_1/ip/player1_coe/player1_coe/p
 Finished Parsing XDC File [c:/Progh/Game/Game.srcs/sources_1/ip/player1_coe/player1_coe/player1_coe_in_context.xdc] for cell 'screen_writer_layout/player1_ram'
 Parsing XDC File [c:/Progh/Game/Game.srcs/sources_1/ip/player2_coe/player2_coe/player2_coe_in_context.xdc] for cell 'screen_writer_layout/player2_ram'
 Finished Parsing XDC File [c:/Progh/Game/Game.srcs/sources_1/ip/player2_coe/player2_coe/player2_coe_in_context.xdc] for cell 'screen_writer_layout/player2_ram'
+Parsing XDC File [c:/Progh/Game/Game.srcs/sources_1/ip/speed_coe/speed_coe/speed_coe_in_context.xdc] for cell 'screen_writer_layout/speed_ram'
+Finished Parsing XDC File [c:/Progh/Game/Game.srcs/sources_1/ip/speed_coe/speed_coe/speed_coe_in_context.xdc] for cell 'screen_writer_layout/speed_ram'
+Parsing XDC File [c:/Progh/Game/Game.srcs/sources_1/ip/heart_coe/heart_coe/heart_coe_in_context.xdc] for cell 'screen_writer_layout/heart_ram'
+Finished Parsing XDC File [c:/Progh/Game/Game.srcs/sources_1/ip/heart_coe/heart_coe/heart_coe_in_context.xdc] for cell 'screen_writer_layout/heart_ram'
+Parsing XDC File [c:/Progh/Game/Game.srcs/sources_1/ip/bomb_up_coe/bomb_up_coe/bomb_up_coe_in_context.xdc] for cell 'screen_writer_layout/bomb_up_ram'
+Finished Parsing XDC File [c:/Progh/Game/Game.srcs/sources_1/ip/bomb_up_coe/bomb_up_coe/bomb_up_coe_in_context.xdc] for cell 'screen_writer_layout/bomb_up_ram'
+Parsing XDC File [c:/Progh/Game/Game.srcs/sources_1/ip/freeze_coe/freeze_coe/freeze_coe_in_context.xdc] for cell 'screen_writer_layout/freeze_ram'
+Finished Parsing XDC File [c:/Progh/Game/Game.srcs/sources_1/ip/freeze_coe/freeze_coe/freeze_coe_in_context.xdc] for cell 'screen_writer_layout/freeze_ram'
+Parsing XDC File [c:/Progh/Game/Game.srcs/sources_1/ip/bomb_coe/bomb_coe/bomb_coe_in_context.xdc] for cell 'screen_writer_layout/bomb_ram'
+Finished Parsing XDC File [c:/Progh/Game/Game.srcs/sources_1/ip/bomb_coe/bomb_coe/bomb_coe_in_context.xdc] for cell 'screen_writer_layout/bomb_ram'
 Parsing XDC File [C:/Progh/Game/Game.srcs/constrs_1/new/constraint.xdc]
 WARNING: [Vivado 12-507] No nets matched 'reset_IBUF'. [C:/Progh/Game/Game.srcs/constrs_1/new/constraint.xdc:39]
 WARNING: [Vivado 12-507] No nets matched 'spi_clk_IBUF'. [C:/Progh/Game/Game.srcs/constrs_1/new/constraint.xdc:48]
@@ -117,20 +149,20 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 930.230 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 931.547 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 930.230 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 931.547 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 930.230 ; gain = 375.883
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 931.547 ; gain = 377.266
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 930.230 ; gain = 375.883
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 931.547 ; gain = 377.266
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -142,17 +174,22 @@ Applied set_property DONT_TOUCH = true for screen_writer_layout/block_ram. (cons
 Applied set_property DONT_TOUCH = true for screen_writer_layout/wall_ram. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for screen_writer_layout/player1_ram. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for screen_writer_layout/player2_ram. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for screen_writer_layout/speed_ram. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for screen_writer_layout/heart_ram. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for screen_writer_layout/bomb_up_ram. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for screen_writer_layout/freeze_ram. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for screen_writer_layout/bomb_ram. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 930.230 ; gain = 375.883
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 931.547 ; gain = 377.266
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-4471] merging register 'HPos_reg[9:0]' into 'hcount_reg[9:0]' [C:/Progh/Game/Game.srcs/sources_1/new/vga.vhd:84]
 INFO: [Synth 8-4471] merging register 'VPos_reg[9:0]' into 'vcount_reg[9:0]' [C:/Progh/Game/Game.srcs/sources_1/new/vga.vhd:85]
 WARNING: [Synth 8-327] inferring latch for variable 'R_Data_Out_reg' [C:/Progh/Game/Game.srcs/sources_1/new/color_scheme.vhd:54]
 WARNING: [Synth 8-327] inferring latch for variable 'G_Data_Out_reg' [C:/Progh/Game/Game.srcs/sources_1/new/color_scheme.vhd:55]
 WARNING: [Synth 8-327] inferring latch for variable 'B_Data_Out_reg' [C:/Progh/Game/Game.srcs/sources_1/new/color_scheme.vhd:56]
-WARNING: [Synth 8-327] inferring latch for variable 'Data_In_reg' [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:187]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_In_reg' [C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd:308]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 930.230 ; gain = 375.883
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 931.547 ; gain = 377.266
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -165,11 +202,12 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   3 Input     33 Bit       Adders := 1     
-	   2 Input     32 Bit       Adders := 3     
+	   3 Input     33 Bit       Adders := 2     
+	   2 Input     32 Bit       Adders := 5     
 	   2 Input     31 Bit       Adders := 2     
 	   2 Input     10 Bit       Adders := 2     
-	   2 Input      6 Bit       Adders := 3     
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 5     
 	   2 Input      5 Bit       Adders := 2     
 +---Registers : 
 	               10 Bit    Registers := 2     
@@ -180,15 +218,16 @@ Detailed RTL Component Info :
 	   2 Input     32 Bit        Muxes := 1     
 	   2 Input     31 Bit        Muxes := 2     
 	   2 Input      9 Bit        Muxes := 1     
-	   2 Input      6 Bit        Muxes := 5     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 10    
 	   2 Input      5 Bit        Muxes := 1     
 	  14 Input      4 Bit        Muxes := 2     
 	  15 Input      4 Bit        Muxes := 2     
-	   2 Input      4 Bit        Muxes := 7     
+	   2 Input      4 Bit        Muxes := 4     
 	   4 Input      4 Bit        Muxes := 1     
-	   6 Input      4 Bit        Muxes := 3     
+	  11 Input      4 Bit        Muxes := 3     
 	   2 Input      3 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 3     
+	   9 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -212,20 +251,21 @@ Detailed RTL Component Info :
 Module screen_writer 
 Detailed RTL Component Info : 
 +---Adders : 
-	   3 Input     33 Bit       Adders := 1     
-	   2 Input     32 Bit       Adders := 3     
+	   3 Input     33 Bit       Adders := 2     
+	   2 Input     32 Bit       Adders := 5     
 	   2 Input     31 Bit       Adders := 2     
-	   2 Input      6 Bit       Adders := 3     
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 5     
 	   2 Input      5 Bit       Adders := 2     
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 1     
 	   2 Input     31 Bit        Muxes := 2     
 	   2 Input      9 Bit        Muxes := 1     
-	   2 Input      6 Bit        Muxes := 5     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 10    
 	   2 Input      5 Bit        Muxes := 1     
-	   6 Input      4 Bit        Muxes := 3     
-	   2 Input      4 Bit        Muxes := 3     
-	   2 Input      1 Bit        Muxes := 3     
+	  11 Input      4 Bit        Muxes := 3     
+	   9 Input      1 Bit        Muxes := 1     
 Module VGA 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -267,7 +307,7 @@ INFO: [Synth 8-3886] merging instance 'vga_layout/b_out_reg[0]' (FD) to 'vga_lay
 INFO: [Synth 8-3886] merging instance 'vga_layout/g_out_reg[0]' (FD) to 'vga_layout/g_out_reg[2]'
 INFO: [Synth 8-3886] merging instance 'vga_layout/r_out_reg[0]' (FD) to 'vga_layout/r_out_reg[2]'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 930.230 ; gain = 375.883
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 931.547 ; gain = 377.266
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -282,13 +322,13 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'clock_layout/clk_out' to 
 INFO: [Synth 8-5578] Moved timing constraint from pin 'clock_layout/clk_pixel' to pin 'clock_layout/bbstub_clk_pixel/O'
 INFO: [Synth 8-5819] Moved 2 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 930.230 ; gain = 375.883
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 931.547 ; gain = 377.266
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 930.230 ; gain = 375.883
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 935.633 ; gain = 381.352
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -300,7 +340,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 930.230 ; gain = 375.883
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 936.699 ; gain = 382.418
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -324,7 +364,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 930.230 ; gain = 375.883
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 941.500 ; gain = 387.219
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -337,7 +377,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 930.230 ; gain = 375.883
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 941.500 ; gain = 387.219
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -349,25 +389,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 930.230 ; gain = 375.883
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 941.500 ; gain = 387.219
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 930.230 ; gain = 375.883
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 941.500 ; gain = 387.219
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 930.230 ; gain = 375.883
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 941.500 ; gain = 387.219
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 930.230 ; gain = 375.883
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 941.500 ; gain = 387.219
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -378,70 +418,80 @@ Report BlackBoxes:
 |      |BlackBox name |Instances |
 +------+--------------+----------+
 |1     |clk_wiz       |         1|
-|2     |player1_coe   |         1|
-|3     |player2_coe   |         1|
-|4     |block_coe     |         1|
-|5     |wall_coe      |         1|
+|2     |bomb_coe      |         1|
+|3     |bomb_up_coe   |         1|
+|4     |freeze_coe    |         1|
+|5     |heart_coe     |         1|
+|6     |speed_coe     |         1|
+|7     |player1_coe   |         1|
+|8     |player2_coe   |         1|
+|9     |block_coe     |         1|
+|10    |wall_coe      |         1|
 +------+--------------+----------+
 
 Report Cell Usage: 
 +------+-------------------+------+
 |      |Cell               |Count |
 +------+-------------------+------+
-|1     |block_coe_bbox_3   |     1|
-|2     |clk_wiz_bbox_0     |     1|
-|3     |player1_coe_bbox_1 |     1|
-|4     |player2_coe_bbox_2 |     1|
-|5     |wall_coe_bbox_4    |     1|
-|6     |BUFG               |     2|
-|7     |CARRY4             |    81|
-|8     |LUT1               |    37|
-|9     |LUT2               |   281|
-|10    |LUT3               |    21|
-|11    |LUT4               |    27|
-|12    |LUT5               |    16|
-|13    |LUT6               |    38|
-|14    |FDRE               |    48|
-|15    |LD                 |     4|
-|16    |LDP                |     9|
-|17    |IBUF               |     4|
-|18    |OBUF               |    23|
+|1     |block_coe_bbox_8   |     1|
+|2     |bomb_coe_bbox_1    |     1|
+|3     |bomb_up_coe_bbox_2 |     1|
+|4     |clk_wiz_bbox_0     |     1|
+|5     |freeze_coe_bbox_3  |     1|
+|6     |heart_coe_bbox_4   |     1|
+|7     |player1_coe_bbox_6 |     1|
+|8     |player2_coe_bbox_7 |     1|
+|9     |speed_coe_bbox_5   |     1|
+|10    |wall_coe_bbox_9    |     1|
+|11    |BUFG               |     2|
+|12    |CARRY4             |   118|
+|13    |LUT1               |    58|
+|14    |LUT2               |   395|
+|15    |LUT3               |    38|
+|16    |LUT4               |    31|
+|17    |LUT5               |    14|
+|18    |LUT6               |    54|
+|19    |FDRE               |    48|
+|20    |LD                 |     4|
+|21    |LDP                |     9|
+|22    |IBUF               |     4|
+|23    |OBUF               |    23|
 +------+-------------------+------+
 
 Report Instance Areas: 
 +------+------------------------+--------------+------+
 |      |Instance                |Module        |Cells |
 +------+------------------------+--------------+------+
-|1     |top                     |              |   609|
-|2     |  screen_writer_layout  |screen_writer |   112|
+|1     |top                     |              |   836|
+|2     |  screen_writer_layout  |screen_writer |   186|
 |3     |    color_scheme_layout |color_scheme  |    27|
 |4     |  spi_layout            |SPI           |    19|
-|5     |  vga_layout            |VGA           |   447|
+|5     |  vga_layout            |VGA           |   600|
 +------+------------------------+--------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 930.230 ; gain = 375.883
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 941.500 ; gain = 387.219
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 12 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 930.230 ; gain = 243.941
-Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 930.230 ; gain = 375.883
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 941.500 ; gain = 254.988
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 941.500 ; gain = 387.219
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 94 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 131 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 944.617 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 947.328 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 13 instances were transformed.
   LD => LDCE: 4 instances
   LDP => LDPE: 9 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-47 Infos, 46 Warnings, 0 Critical Warnings and 0 Errors encountered.
+57 Infos, 58 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 944.617 ; gain = 634.820
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 944.617 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 947.328 ; gain = 637.758
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 947.328 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Progh/Game/Game.runs/synth_1/top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Mar 11 16:05:02 2020...
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 12 19:43:16 2020...

@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date             : Wed Mar 11 16:06:03 2020
+| Date             : Thu Mar 12 19:44:16 2020
 | Host             : LAPTOP-OQJ5SABP running 64-bit major release  (build 9200)
 | Command          : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
 | Design           : top
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.219        |
+| Total On-Chip Power (W)  | 0.222        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.147        |
+| Dynamic (W)              | 0.149        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 83.9         |
@@ -53,18 +53,18 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        5 |       --- |             --- |
-| Slice Logic    |    <0.001 |      586 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      296 |     20800 |            1.42 |
+| Slice Logic    |    <0.001 |      803 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      420 |     20800 |            2.02 |
+|   CARRY4       |    <0.001 |      118 |      8150 |            1.45 |
 |   Register     |    <0.001 |       64 |     41600 |            0.15 |
 |   BUFG         |    <0.001 |        2 |        32 |            6.25 |
-|   CARRY4       |    <0.001 |       81 |      8150 |            0.99 |
-|   Others       |     0.000 |       19 |       --- |             --- |
-| Signals        |    <0.001 |      272 |       --- |             --- |
-| Block RAM      |     0.002 |        2 |        50 |            4.00 |
+|   Others       |     0.000 |       29 |       --- |             --- |
+| Signals        |    <0.001 |      364 |       --- |             --- |
+| Block RAM      |     0.004 |      4.5 |        50 |            9.00 |
 | MMCM           |     0.135 |        1 |         5 |           20.00 |
-| I/O            |     0.009 |       28 |       106 |           26.42 |
+| I/O            |     0.008 |       28 |       106 |           26.42 |
 | Static Power   |     0.072 |          |           |                 |
-| Total          |     0.219 |          |           |                 |
+| Total          |     0.222 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,7 +74,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.013 |       0.003 |      0.010 |
+| Vccint    |       1.000 |     0.016 |       0.006 |      0.010 |
 | Vccaux    |       1.800 |     0.088 |       0.075 |      0.013 |
 | Vcco33    |       3.300 |     0.003 |       0.002 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -83,7 +83,7 @@ Table of Contents
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.001 |       0.000 |      0.000 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
@@ -145,10 +145,10 @@ Table of Contents
 +------------------------+-----------+
 | Name                   | Power (W) |
 +------------------------+-----------+
-| top                    |     0.147 |
+| top                    |     0.149 |
 |   clock_layout         |     0.135 |
 |     inst               |     0.135 |
-|   screen_writer_layout |     0.002 |
+|   screen_writer_layout |     0.005 |
 +------------------------+-----------+
 
 

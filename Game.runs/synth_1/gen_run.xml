@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1583939067">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1584038556">
   <File Type="PA-TCL" Name="top.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="top_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="top_reports.tcl"/>
@@ -72,6 +72,36 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/../../Image/speed.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Image/heart.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Image/bomb.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Image/bomb_up.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Image/freeze.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="top"/>
@@ -99,9 +129,14 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="player2_coe"/>
   <BlockFileSet Type="BlockSrcs" Name="clk_wiz"/>
+  <BlockFileSet Type="BlockSrcs" Name="player2_coe"/>
   <BlockFileSet Type="BlockSrcs" Name="block_coe"/>
   <BlockFileSet Type="BlockSrcs" Name="wall_coe"/>
+  <BlockFileSet Type="BlockSrcs" Name="bomb_up_coe"/>
   <BlockFileSet Type="BlockSrcs" Name="player1_coe"/>
+  <BlockFileSet Type="BlockSrcs" Name="freeze_coe"/>
+  <BlockFileSet Type="BlockSrcs" Name="speed_coe"/>
+  <BlockFileSet Type="BlockSrcs" Name="heart_coe"/>
+  <BlockFileSet Type="BlockSrcs" Name="bomb_coe"/>
 </GenRun>

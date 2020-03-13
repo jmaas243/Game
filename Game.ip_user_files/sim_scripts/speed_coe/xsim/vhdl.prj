@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../../Game.srcs/sources_1/ip/speed_coe/speed_coe_sim_netlist.vhdl" \
+
+nosort

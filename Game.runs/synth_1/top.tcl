@@ -36,7 +36,12 @@ set_property ip_cache_permissions {read write} [current_project]
 add_files C:/Image/block.coe
 add_files C:/Image/wall.coe
 add_files C:/Image/player1.coe
-add_files c:/Image/player2.coe
+add_files C:/Image/player2.coe
+add_files c:/Image/speed.coe
+add_files c:/Image/heart.coe
+add_files c:/Image/bomb.coe
+add_files c:/Image/bomb_up.coe
+add_files c:/Image/freeze.coe
 read_vhdl -library xil_defaultlib {
   C:/Progh/Game/Game.srcs/sources_1/new/color_scheme.vhd
   C:/Progh/Game/Game.srcs/sources_1/new/image1.vhd
@@ -58,8 +63,23 @@ set_property used_in_implementation false [get_files -all c:/Progh/Game/Game.src
 read_ip -quiet C:/Progh/Game/Game.srcs/sources_1/ip/player1_coe/player1_coe.xci
 set_property used_in_implementation false [get_files -all c:/Progh/Game/Game.srcs/sources_1/ip/player1_coe/player1_coe_ooc.xdc]
 
-read_ip -quiet c:/Progh/Game/Game.srcs/sources_1/ip/player2_coe/player2_coe.xci
+read_ip -quiet C:/Progh/Game/Game.srcs/sources_1/ip/player2_coe/player2_coe.xci
 set_property used_in_implementation false [get_files -all c:/Progh/Game/Game.srcs/sources_1/ip/player2_coe/player2_coe_ooc.xdc]
+
+read_ip -quiet c:/Progh/Game/Game.srcs/sources_1/ip/speed_coe/speed_coe.xci
+set_property used_in_implementation false [get_files -all c:/Progh/Game/Game.srcs/sources_1/ip/speed_coe/speed_coe_ooc.xdc]
+
+read_ip -quiet c:/Progh/Game/Game.srcs/sources_1/ip/heart_coe/heart_coe.xci
+set_property used_in_implementation false [get_files -all c:/Progh/Game/Game.srcs/sources_1/ip/heart_coe/heart_coe_ooc.xdc]
+
+read_ip -quiet c:/Progh/Game/Game.srcs/sources_1/ip/bomb_up_coe/bomb_up_coe.xci
+set_property used_in_implementation false [get_files -all c:/Progh/Game/Game.srcs/sources_1/ip/bomb_up_coe/bomb_up_coe_ooc.xdc]
+
+read_ip -quiet c:/Progh/Game/Game.srcs/sources_1/ip/freeze_coe/freeze_coe.xci
+set_property used_in_implementation false [get_files -all c:/Progh/Game/Game.srcs/sources_1/ip/freeze_coe/freeze_coe_ooc.xdc]
+
+read_ip -quiet c:/Progh/Game/Game.srcs/sources_1/ip/bomb_coe/bomb_coe.xci
+set_property used_in_implementation false [get_files -all c:/Progh/Game/Game.srcs/sources_1/ip/bomb_coe/bomb_coe_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
