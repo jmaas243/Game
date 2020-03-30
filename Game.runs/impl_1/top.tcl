@@ -82,11 +82,11 @@ set rc [catch {
   read_ip -quiet C:/Progh/Game/Game.srcs/sources_1/ip/wall_coe/wall_coe.xci
   read_ip -quiet C:/Progh/Game/Game.srcs/sources_1/ip/player1_coe/player1_coe.xci
   read_ip -quiet C:/Progh/Game/Game.srcs/sources_1/ip/player2_coe/player2_coe.xci
-  read_ip -quiet c:/Progh/Game/Game.srcs/sources_1/ip/speed_coe/speed_coe.xci
-  read_ip -quiet c:/Progh/Game/Game.srcs/sources_1/ip/heart_coe/heart_coe.xci
-  read_ip -quiet c:/Progh/Game/Game.srcs/sources_1/ip/bomb_up_coe/bomb_up_coe.xci
-  read_ip -quiet c:/Progh/Game/Game.srcs/sources_1/ip/freeze_coe/freeze_coe.xci
-  read_ip -quiet c:/Progh/Game/Game.srcs/sources_1/ip/bomb_coe/bomb_coe.xci
+  read_ip -quiet C:/Progh/Game/Game.srcs/sources_1/ip/speed_coe/speed_coe.xci
+  read_ip -quiet C:/Progh/Game/Game.srcs/sources_1/ip/heart_coe/heart_coe.xci
+  read_ip -quiet C:/Progh/Game/Game.srcs/sources_1/ip/bomb_up_coe/bomb_up_coe.xci
+  read_ip -quiet C:/Progh/Game/Game.srcs/sources_1/ip/freeze_coe/freeze_coe.xci
+  read_ip -quiet C:/Progh/Game/Game.srcs/sources_1/ip/bomb_coe/bomb_coe.xci
   read_xdc C:/Progh/Game/Game.srcs/constrs_1/new/constraint.xdc
   link_design -top top -part xc7a35tcpg236-1
   close_msg_db -file init_design.pb

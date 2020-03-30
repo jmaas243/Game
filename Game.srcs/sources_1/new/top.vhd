@@ -21,6 +21,8 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+library work;
+use work.pkg.all;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -48,7 +50,7 @@ g_out:  OUT  STD_LOGIC_VECTOR(3 DOWNTO 0);
 b_out:  OUT  STD_LOGIC_VECTOR(3 DOWNTO 0);
 
 --buffer input from SPI
-LED : OUT STD_LOGIC_VECTOR (7 downto 0)); 
+LED : OUT STD_LOGIC_VECTOR (15 downto 0)); 
 end top;
 
 architecture Behavioral of top is
@@ -65,7 +67,9 @@ component spi is
            MISO : out STD_LOGIC;    -- SPI serial data output
            MOSI : in  STD_LOGIC;    -- SPI serial data input
            SS   : in  STD_LOGIC;    -- chip select input (active low)
-           LED  : out STD_LOGIC_VECTOR (7 downto 0) := x"FF");
+           LED  : out STD_LOGIC_VECTOR (15 downto 0) := x"FFFF";
+           Ram  : out RamType
+           );
 end component;
 
 component screen_writer
@@ -77,7 +81,8 @@ component screen_writer
            
            r_out:  OUT  STD_LOGIC_VECTOR(3 DOWNTO 0);
            g_out:  OUT  STD_LOGIC_VECTOR(3 DOWNTO 0);
-           b_out:  OUT  STD_LOGIC_VECTOR(3 DOWNTO 0)
+           b_out:  OUT  STD_LOGIC_VECTOR(3 DOWNTO 0);
+           Ram  : in RamType
 --           LED: OUT  STD_LOGIC_VECTOR(7 DOWNTO 0)
 		);
 end component;
@@ -115,19 +120,23 @@ signal s_R, s_G, s_B : std_logic_vector(3 downto 0);
 --led debug
 signal led_zero : STD_LOGIC_VECTOR(7 downto 0);
 
+--ram
+signal rambuffer : RamType;
+
 begin
 
 clock_layout : clk_wiz port map(
            clk_in => clk,
            clk_pixel => clk_pixel,
            clk_out => clk_out);
-
+           
 spi_layout : spi port map( 
            SCK => spi_clk,
            MISO => miso,
            MOSI => mosi,
            SS => slaveselect,
-           LED => LED(7 downto 0));
+           LED => LED(15 downto 0),
+           Ram => rambuffer);           
            
 screen_writer_layout : screen_writer port map(
            clk => clk_pixel,
@@ -138,7 +147,8 @@ screen_writer_layout : screen_writer port map(
            
            r_out =>  s_R,
            g_out =>  s_G,
-           b_out =>  s_B
+           b_out =>  s_B,
+           Ram => rambuffer
            
            --LED => LED
            );               

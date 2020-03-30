@@ -23,8 +23,11 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 use IEEE.NUMERIC_STD.ALL;
 
-use ieee.std_logic_arith.all;
+--use ieee.std_logic_arith.all;
 use ieee.std_logic_unsigned.all;
+
+library work;
+use work.pkg.all;
 
 --use ieee.std_logic_unsigned.all;
 
@@ -46,7 +49,8 @@ entity screen_writer is
            r_out:  OUT  STD_LOGIC_VECTOR(3 DOWNTO 0);
            g_out:  OUT  STD_LOGIC_VECTOR(3 DOWNTO 0);
            b_out:  OUT  STD_LOGIC_VECTOR(3 DOWNTO 0);
-           LED : OUT  STD_LOGIC_VECTOR(7 DOWNTO 0)
+           LED : OUT  STD_LOGIC_VECTOR(7 DOWNTO 0);
+           Ram  : in RamType
            );
 end screen_writer;
 
@@ -220,7 +224,7 @@ signal addr_freeze : std_logic_VECTOR(7 downto 0) := (others => '0');
 signal read_freeze : INTEGER;
 
 --calculate current position in block ram
-signal hor_int, ver_int : INTEGER;
+signal hor_int, ver_int, player1_y, player2_x, player1_x_buf, player2_y_buf, player1_x, player2_y  : INTEGER;
 
 --check for transparent
 signal enable_player1 : STD_LOGIC;
@@ -229,6 +233,9 @@ signal enable_bomb    : STD_LOGIC;
 
 --color pallete
 signal Data_In, R_Data_Out, G_Data_Out, B_Data_Out : std_logic_VECTOR(3 downto 0);
+
+type RamType  is array (9 downto 0) of std_logic_vector(9 downto 0);
+signal ram_buffer : RamType;
 
 begin
 
@@ -318,11 +325,57 @@ begin
 if (reset = '1') then
 x <= 0;
 y <= 0;  
+
+      
+player1_x <= 17*H;
+player1_y <= 3*Scale*H;--to_integer(unsigned(Ram(7)));
+
+player2_x <= 19*Scale*H;
+player2_y <= 15*H;--to_integer(unsigned(Ram(7)));
+
 else               
         x<= 200;
         y<= 64;      
+        
+       -- player1_x <= to_integer(unsigned(Ram(0)));
+      -- player1_x <= 620;
+        --player1_x <= 0*Scale*H + 11;
+       -- player1_x <= to_integer(unsigned(Ram(0)));
+            
+       if (Ram(0)=x"0" or to_integer(unsigned(Ram(0)))=player1_x_buf) then
+           player1_x <= player1_x_buf;
+       --elsif(player1_x /= player1_x_buf) then
+       else
+            player1_x <= to_integer(unsigned(Ram(0)));
+       end if;
+
+       if (Ram(3)=x"0" or to_integer(unsigned(Ram(3)))=player2_y_buf) then
+--            player2_y <= to_integer(unsigned(ram_buffer(3)));
+        player2_y <= player2_y_buf;
+       --elsif(player2_y /= player2_y_buf) then
+       else
+            player2_y <= to_integer(unsigned(Ram(3)));
+       end if;
+       
+--      if (to_integer(unsigned(Ram(0))) = to_integer(unsigned(ram_buffer(0)))) then
+--      player1_x <= to_integer(unsigned(ram_buffer(0)));      
+--      else
+--      player1_x <= to_integer(unsigned(Ram(0)));           
+--      end if;
+      
+        player1_y <= 7*Scale*H;--to_integer(unsigned(Ram(7)));
+        
+        player2_x <= 19*Scale*H;--to_integer(unsigned(Ram(7)));
+        --player2_y <= to_integer(unsigned(Ram(3)));
+        
+
+        
 end if;
 
+
+        player1_x_buf <= player1_x;
+        player2_y_buf <= player2_y;
+         
        hor_int <= ((((hcount-1)/2) mod 16)+1);
        ver_int <= ((((vcount-1)/Scale) mod H)); 
        
@@ -339,11 +392,15 @@ end if;
         addr_block <= std_logic_vector(to_unsigned(read_block, addr_block'length));
         
         --get current date player1
-        read_player1 <= (((((((hcount-1)/2)+x) mod 16)+1)+((((((vcount-1)/Scale)+y) mod H))*16)));             
-        addr_player1 <= std_logic_vector(to_unsigned(read_player1, addr_player1'length));        
+        --read_player1 <= (((((((hcount-1)/2)+ 1 + player1_x + 3) mod 16)+1)+((((((vcount-1)/Scale)+ player1_y) mod H))*16)));   
+read_player1 <= (((((((hcount-1)/2)+ 1 + player1_x+2) mod 16)+1)+((((((vcount-1)/Scale)+ player1_y) mod H))*16)));             
+        --addr_player1 <= std_logic_vector(to_unsigned(read_player1, addr_player1'length));        
+        --read_player1 <= 0;--((vcount - player1_y) * H + (hcount - player1_x));--(((vcount - 100*H) + (hcount - 100));             
+        addr_player1 <= std_logic_vector(to_unsigned(read_player1, addr_player1'length));
         
         --get current date player2
-        read_player2 <= ((hor_int+(ver_int*16)));            
+        --read_player2 <= ((hor_int+(ver_int*16)));   
+read_player2 <= (((((((hcount-1)/2)+ 1 + player2_x+2) mod 16)+1)+((((((vcount-1)/Scale)+ player2_y) mod H))*16)));                   
         addr_player2 <= std_logic_vector(to_unsigned(read_player2, addr_player2'length));
         
         --get current date speed
@@ -454,20 +511,31 @@ end if;
         g_out <= G_Data_Out;
         b_out <= B_Data_Out;  
         
-        elsif (vcount >= ((3*Scale*H)+1+y) and vcount < ((4*Scale*H)+1+y) and       --meerder player1 tekenen om te kijken wat de ofsett doet
-        hcount >= ((3*scale)+1+x) and hcount < ((3*scale)+1+x+(1*Scale*H)) and
-        enable_player1 = '1') then
+--        elsif (vcount >= ((3*Scale*H)+1+y) and vcount < ((4*Scale*H)+1+y) and       --meerder player1 tekenen om te kijken wat de ofsett doet
+--        hcount >= ((3*scale)+1+x) and hcount < ((3*scale)+1+x+(1*Scale*H)) and
+--        enable_player1 = '1') then
 
+--        elsif (vcount >= player1_y+1 and vcount < (player1_y + (1*Scale*H) + 1)
+--        and hcount >= player1_x + 1 and hcount < player1_x +(1*Scale*H) + 1) then
+        
+        elsif 
+        (vcount >= (1+player1_y) and vcount < ((1*Scale*H)+1+player1_y) and       --meerder player1 tekenen om te kijken wat de ofsett doet
+       hcount >= (640 - (player1_x*2)) and 
+     --   hcount < (1+player1_x+(1*Scale*H) - 12) and      --transparrant at each side
+       hcount < (640 - (player1_x*2)+(1*Scale*H) - 11) and      --transparrant at each side
+        enable_player1 = '1') then
+--         elsif (enable_player1 = '1') then
         Data_In <= dout_player1;
                                    
         r_out <= R_Data_Out;         
         g_out <= G_Data_Out;
         b_out <= B_Data_Out;  
          
-        elsif (vcount >= ((13*Scale*H)+1) and vcount < ((14*Scale*H)+1) and 
-        hcount >= ((19*Scale*H)+1) and hcount <= ((20*Scale*H)+1)and
-        enable_player2 = '1') then
+        elsif (vcount >= (480 - (player2_y*2))+1) and (vcount < (480 - (player2_y*2)+(1*Scale*H))+1) and 
+        (hcount >= ((19*Scale*H)+1)) and (hcount <= ((20*Scale*H)+1))and
+        (enable_player2 = '1') then
         
+--        elsif (enable_player2 = '1') then
         Data_In <= dout_player2;
                                    
         r_out <= R_Data_Out;         
@@ -525,7 +593,11 @@ end if;
                 b_out <= B_Data_Out;
         
             end if;  --background  
-        end if; --sprite         
+        end if; --sprite   
+        
+--        ram_buffer(0) <= std_logic_vector(to_unsigned(player1_x, ram_buffer(0)'length));     
+--        ram_buffer(3) <= std_logic_vector(to_unsigned(player2_y, ram_buffer(3)'length));   
+
 end process;
 
 end Behavioral;

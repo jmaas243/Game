@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="bomb_coe_synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1584038381">
   <File Type="PA-TCL" Name="bomb_coe.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="bomb_coe_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="bomb_coe_reports.tcl"/>
   <File Type="RDS-RDS" Name="bomb_coe.vds"/>
   <File Type="RDS-UTIL" Name="bomb_coe_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="bomb_coe_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="bomb_coe.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="bomb_coe_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="bomb_coe_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/bomb_coe">
     <File Path="$PSRCDIR/sources_1/ip/bomb_coe/bomb_coe.xci">
       <FileInfo>
@@ -42,9 +39,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>
