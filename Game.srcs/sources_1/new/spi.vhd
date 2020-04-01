@@ -40,15 +40,27 @@ entity SPI is
            MISO : out STD_LOGIC;    -- SPI serial data output
            MOSI : in  STD_LOGIC;    -- SPI serial data input
            SS   : in  STD_LOGIC;    -- chip select input (active low)
-           LED  : out STD_LOGIC_VECTOR (15 downto 0) := x"FFFF";
-           Ram  : out RamType
+           LED  : out STD_LOGIC_VECTOR (15 downto 0) := x"0000";
+           Ram  : out RamType;
+           position : out INTEGER;
+           data : out INTEGER;
+           player1_x_signal, player2_y_signal  : out INTEGER
           );
 end SPI;
 
+
+
 architecture Behavioral of SPI is
+signal position2 : INTEGER;
+
+signal test : INTEGER;
+
+signal buffering : STD_LOGIC_VECTOR(9 downto 0);
+
     signal dat_reg : STD_LOGIC_VECTOR (15 downto 0);
     signal output_reg : STD_LOGIC_VECTOR (7 downto 0);
     signal werk : STD_LOGIC_VECTOR(3 downto 0);
+    
 begin
 
     process (SCK)
@@ -67,14 +79,23 @@ begin
 --   process (SS)
 --  begin
 --        if (SS'event and SS = '1') then
---            LED <= dat_reg ;
+----            LED <= dat_reg ;
            
---            Ram(to_integer(unsigned(dat_reg(15 downto 10)))) <= dat_reg(9 downto 0);--"0000000001100100"; --dat_reg;--std_logic_vector(to_unsigned(100, Ram(0)'length));
+----            Ram(to_integer(unsigned(dat_reg(15 downto 10)))) <= dat_reg(9 downto 0);--"0000000001100100"; --dat_reg;--std_logic_vector(to_unsigned(100, Ram(0)'length));
+       
+--       position2 <= to_integer(unsigned(dat_reg(15 downto 10)));
+--LED <= std_logic_vector(to_unsigned(position2, LED'length));
+--test <= position2;
+
+-- Ram(position2) <= dat_reg(9 downto 0);
+ 
+-- position <= position2;
+ 
+-- data <= (to_integer(unsigned(dat_reg(9 downto 0))));       
 --       end if;
 --   end process;
 
 LED <= dat_reg ;
-           
- Ram(to_integer(unsigned(dat_reg(15 downto 10)))) <= dat_reg(9 downto 0);
+Ram(to_integer(unsigned(dat_reg(15 downto 10)))) <= dat_reg(9 downto 0);
 
 end Behavioral;

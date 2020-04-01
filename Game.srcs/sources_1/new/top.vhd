@@ -68,7 +68,10 @@ component spi is
            MOSI : in  STD_LOGIC;    -- SPI serial data input
            SS   : in  STD_LOGIC;    -- chip select input (active low)
            LED  : out STD_LOGIC_VECTOR (15 downto 0) := x"FFFF";
-           Ram  : out RamType
+           Ram  : out RamType;
+           position : out INTEGER;
+           data : out INTEGER;
+           player1_x_signal, player2_y_signal  : out INTEGER
            );
 end component;
 
@@ -82,7 +85,10 @@ component screen_writer
            r_out:  OUT  STD_LOGIC_VECTOR(3 DOWNTO 0);
            g_out:  OUT  STD_LOGIC_VECTOR(3 DOWNTO 0);
            b_out:  OUT  STD_LOGIC_VECTOR(3 DOWNTO 0);
-           Ram  : in RamType
+           Ram  : in RamType;
+           position : in INTEGER;
+           data : in INTEGER;
+           player1_x_signal, player2_y_signal  : IN INTEGER
 --           LED: OUT  STD_LOGIC_VECTOR(7 DOWNTO 0)
 		);
 end component;
@@ -123,6 +129,9 @@ signal led_zero : STD_LOGIC_VECTOR(7 downto 0);
 --ram
 signal rambuffer : RamType;
 
+signal position, data : INTEGER;
+signal player1_x, player2_y : INTEGER;
+
 begin
 
 clock_layout : clk_wiz port map(
@@ -136,7 +145,11 @@ spi_layout : spi port map(
            MOSI => mosi,
            SS => slaveselect,
            LED => LED(15 downto 0),
-           Ram => rambuffer);           
+           Ram => rambuffer,
+           position => position,
+           data => data,
+           player1_x_signal => player1_x,
+           player2_y_signal => player2_y);           
            
 screen_writer_layout : screen_writer port map(
            clk => clk_pixel,
@@ -148,7 +161,11 @@ screen_writer_layout : screen_writer port map(
            r_out =>  s_R,
            g_out =>  s_G,
            b_out =>  s_B,
-           Ram => rambuffer
+           Ram => rambuffer,
+           position => position,
+           data => data,
+           player1_x_signal => player1_x,
+           player2_y_signal => player2_y
            
            --LED => LED
            );               

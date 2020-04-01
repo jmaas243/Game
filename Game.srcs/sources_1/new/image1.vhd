@@ -50,7 +50,10 @@ entity screen_writer is
            g_out:  OUT  STD_LOGIC_VECTOR(3 DOWNTO 0);
            b_out:  OUT  STD_LOGIC_VECTOR(3 DOWNTO 0);
            LED : OUT  STD_LOGIC_VECTOR(7 DOWNTO 0);
-           Ram  : in RamType
+           Ram  : in RamType;
+           position : in INTEGER;
+           data : in INTEGER;
+           player1_x_signal, player2_y_signal : in INTEGER
            );
 end screen_writer;
 
@@ -234,7 +237,7 @@ signal enable_bomb    : STD_LOGIC;
 --color pallete
 signal Data_In, R_Data_Out, G_Data_Out, B_Data_Out : std_logic_VECTOR(3 downto 0);
 
-type RamType  is array (9 downto 0) of std_logic_vector(9 downto 0);
+type RamType  is array (9 downto 0) of INTEGER;
 signal ram_buffer : RamType;
 
 begin
@@ -330,51 +333,80 @@ y <= 0;
 player1_x <= 17*H;
 player1_y <= 3*Scale*H;--to_integer(unsigned(Ram(7)));
 
-player2_x <= 19*Scale*H;
-player2_y <= 15*H;--to_integer(unsigned(Ram(7)));
+player2_x <= 17*Scale*H - 3;
+player2_y <= 5*H;--to_integer(unsigned(Ram(7)));
 
 else               
         x<= 200;
         y<= 64;      
         
+--        ram_buffer(0)   <= data;
+--        ram_buffer(3)   <= data;
+        
+        --ram_buffer(0)   <= std_logic_vector(to_unsigned(85, ram_buffer(0)'length));
+       -- ram_buffer(3)    <= std_logic_vector(to_unsigned(100, ram_buffer(3)'length));
+
+         
+        
+--        if (Ram(0)/=Ram(3)) then 
+--                player1_x <= to_integer(unsigned(Ram(0)));                
+--           else
+--            player1_x <= 55;
+--        end if;
+        
+--        if (Ram(3)/=Ram(0)) then 
+--        player2_y <= to_integer(unsigned(Ram(3)));
+--         else
+--            player2_y <= 85;
+--        end if;
        -- player1_x <= to_integer(unsigned(Ram(0)));
       -- player1_x <= 620;
         --player1_x <= 0*Scale*H + 11;
        -- player1_x <= to_integer(unsigned(Ram(0)));
             
-       if (Ram(0)=x"0" or to_integer(unsigned(Ram(0)))=player1_x_buf) then
-           player1_x <= player1_x_buf;
-       --elsif(player1_x /= player1_x_buf) then
-       else
-            player1_x <= to_integer(unsigned(Ram(0)));
-       end if;
+--       if (Ram(0)=x"0" or to_integer(unsigned(Ram(0)))=player1_x_buf) then
+--           player1_x <= player1_x_buf;
+--       --elsif(player1_x /= player1_x_buf) then
+--       else
+--            player1_x <= to_integer(unsigned(Ram(0)));
+--       end if;
 
-       if (Ram(3)=x"0" or to_integer(unsigned(Ram(3)))=player2_y_buf) then
---            player2_y <= to_integer(unsigned(ram_buffer(3)));
-        player2_y <= player2_y_buf;
-       --elsif(player2_y /= player2_y_buf) then
-       else
-            player2_y <= to_integer(unsigned(Ram(3)));
-       end if;
+--       if (Ram(3)=x"0" or to_integer(unsigned(Ram(3)))=player2_y_buf) then
+----            player2_y <= to_integer(unsigned(ram_buffer(3)));
+--        player2_y <= player2_y_buf;
+--       --elsif(player2_y /= player2_y_buf) then
+--       else
+--            player2_y <= to_integer(unsigned(Ram(3)));
+--       end if;
+
+--player2_y <= 85;
        
---      if (to_integer(unsigned(Ram(0))) = to_integer(unsigned(ram_buffer(0)))) then
---      player1_x <= to_integer(unsigned(ram_buffer(0)));      
---      else
---      player1_x <= to_integer(unsigned(Ram(0)));           
---      end if;
+----      if (to_integer(unsigned(Ram(0))) = to_integer(unsigned(ram_buffer(0)))) then
+----      player1_x <= to_integer(unsigned(ram_buffer(0)));      
+----      else
+----      player1_x <= to_integer(unsigned(Ram(0)));           
+----      end if;
       
-        player1_y <= 7*Scale*H;--to_integer(unsigned(Ram(7)));
+--        player1_y <= 7*Scale*H;--to_integer(unsigned(Ram(7)));
         
-        player2_x <= 19*Scale*H;--to_integer(unsigned(Ram(7)));
-        --player2_y <= to_integer(unsigned(Ram(3)));
+--        player2_x <= 19*Scale*H;--to_integer(unsigned(Ram(7)));
+--        --player2_y <= to_integer(unsigned(Ram(3)));
         
 
+ player1_x <=  to_integer(unsigned(Ram(0)));   
+ player1_y <= 3*Scale*H;--to_integer(unsigned(Ram(7))); 
+ 
+ player2_x <= 3*Scale*H - 3;
+ player2_y <= 85;   
         
 end if;
 
+--         player1_x <= to_integer(unsigned(ram_buffer(0)));    
+--         player2_y <= to_integer(unsigned(ram_buffer(3)));
 
-        player1_x_buf <= player1_x;
-        player2_y_buf <= player2_y;
+         
+--        player1_x_buf <= player1_x;
+--        player2_y_buf <= player2_y;
          
        hor_int <= ((((hcount-1)/2) mod 16)+1);
        ver_int <= ((((vcount-1)/Scale) mod H)); 
@@ -532,7 +564,7 @@ read_player2 <= (((((((hcount-1)/2)+ 1 + player2_x+2) mod 16)+1)+((((((vcount-1)
         b_out <= B_Data_Out;  
          
         elsif (vcount >= (480 - (player2_y*2))+1) and (vcount < (480 - (player2_y*2)+(1*Scale*H))+1) and 
-        (hcount >= ((19*Scale*H)+1)) and (hcount <= ((20*Scale*H)+1))and
+        (hcount >= (player2_x+1)) and (hcount <= ((1*Scale*H)+player2_x+1))and
         (enable_player2 = '1') then
         
 --        elsif (enable_player2 = '1') then
